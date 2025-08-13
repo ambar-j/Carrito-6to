@@ -15,7 +15,7 @@ body {
 
 /* Header */
 header {
-    background-color: #007bff;
+    background-color: #b300ff;
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -96,13 +96,13 @@ nav ul li:hover {
 
 .producto h3 {
     font-size: 16px;
-    color: #007bff;
+    color: #a600ff;
     margin-bottom: 15px;
 }
 
 /* Botón Comprar */
 .producto button {
-    background-color: #007bff;
+    background-color: #c300ff;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -114,7 +114,7 @@ nav ul li:hover {
 }
 
 .producto button:hover {
-    background-color: #0056b3;
+    background-color: #b000b3;
 }
 
 /* Footer */
