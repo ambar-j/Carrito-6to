@@ -167,15 +167,19 @@ function cargarProductos() {
         const divProducto = document.createElement("div");
         divProducto.className = "producto";
         divProducto.innerHTML = `
-            <h2>${producto.nombre}</h2>
+            <h2 id="nombreProducto">${producto.nombre}</h2>
             <img src="${producto.imagen}" alt="${producto.nombre}">
-            <p>${producto.descripcion}</p>
-            <h3>Precio: $${producto.precio.toLocaleString()}</h3>
-            <button>Comprar</button>
+            <p id="descripcionProducto">${producto.descripcion}</p>
+            <h3 id="precioProducto">Precio: $${producto.precio.toLocaleString()}</h3>
+            <button id="btncomprar" onclick="verDetalle()">Comprar</button>
         `;
         contenedor.appendChild(divProducto);
     });
 }
 
 cargarProductos();
+
+function verDetalle() {
+  
+}
 
