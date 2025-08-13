@@ -161,25 +161,26 @@ let productos = [
   }
 ];
 
-function cargarProductos() {
-    const contenedor = document.getElementById("boxproductos");
-    productos.forEach(producto => {
-        const divProducto = document.createElement("div");
-        divProducto.className = "producto";
-        divProducto.innerHTML = `
-            <h2 id="nombreProducto">${producto.nombre}</h2>
-            <img src="${producto.imagen}" alt="${producto.nombre}">
-            <p id="descripcionProducto">${producto.descripcion}</p>
-            <h3 id="precioProducto">Precio: $${producto.precio.toLocaleString()}</h3>
-            <button id="btncomprar" onclick="verDetalle()">Comprar</button>
-        `;
-        contenedor.appendChild(divProducto);
-    });
+function cargarproductos() {
+
+    for( let producto of productos){
+        let parrafo = document.createElement("div");
+        parrafo.id="boxproducto";
+        parrafo.innerHTML = `
+             <h2 id="nombreproducto"> ${producto.nombre}</h2>
+             <img src="" alt="" id="${producto.imagen}">
+            <h3 id="precioproducto"> $${producto.precio.toLocaleString()}</h3>
+            <button id="btncomprar" onclick ="verdetalle(${producto.id})">Comprar</button>
+        `
+        document.getElementById("boxproductos").appendChild(parrafo);
+    }
 }
 
-cargarProductos();
+cargarproductos()
 
-function verDetalle() {
-  
+function verdetalle(id) {
+  let productoseleccionado = productos.find(producto => producto.id == id );
+  let productojson = JSON.stringify(productoseleccionado);
+  localStorage.setItem("detalle", productojson);
+  window.location.href="detalle.html";
 }
-
