@@ -2,7 +2,7 @@ let productos = [
   {
     "id": 1,
     "nombre": "Refrigerador LG Smart",
-    "imagen": "https://example.com/images/refrigerador-lg.jpg",
+    "imagen": "img/helader.webp",
     "descripcion": "Refrigerador LG Smart con capacidad de 300 litros, tecnología inverter y control digital.",
     "precio": 85000,
     "stock": 10
@@ -10,7 +10,7 @@ let productos = [
   {
     "id": 2,
     "nombre": "Microondas Samsung",
-    "imagen": "https://example.com/images/microondas-samsung.jpg",
+    "imagen": "img/microondas.webp",
     "descripcion": "Microondas Samsung 800W con grill y varias funciones de cocción.",
     "precio": 12000,
     "stock": 15
@@ -18,7 +18,7 @@ let productos = [
   {
     "id": 3,
     "nombre": "Licuadora Oster Pro",
-    "imagen": "https://example.com/images/licuadora-oster.jpg",
+    "imagen": "img/licuadora.webp",
     "descripcion": "Licuadora Oster Pro con motor de 600W y jarra de vidrio de 1.5 litros.",
     "precio": 6500,
     "stock": 25
@@ -26,7 +26,7 @@ let productos = [
   {
     "id": 4,
     "nombre": "Lavadora Whirlpool",
-    "imagen": "https://example.com/images/lavadora-whirlpool.jpg",
+    "imagen": "img/lavadora.webp",
     "descripcion": "Lavadora Whirlpool automática de 7kg con múltiples programas de lavado.",
     "precio": 22000,
     "stock": 8
@@ -34,7 +34,7 @@ let productos = [
   {
     "id": 5,
     "nombre": "Plancha Philips",
-    "imagen": "https://example.com/images/plancha-philips.jpg",
+    "imagen": "img/plancha.webp",
     "descripcion": "Plancha a vapor Philips con suela antiadherente y función anti-goteo.",
     "precio": 4800,
     "stock": 30
@@ -42,7 +42,7 @@ let productos = [
   {
     "id": 6,
     "nombre": "Aspiradora Dyson V10",
-    "imagen": "https://example.com/images/aspiradora-dyson-v10.jpg",
+    "imagen": "img/aspiradora.webp",
     "descripcion": "Aspiradora inalámbrica Dyson V10 con potente succión y batería de larga duración.",
     "precio": 60000,
     "stock": 5
@@ -143,7 +143,7 @@ let productos = [
     "precio": 25000,
     "stock": 14
   },
-  {
+  /*{
     "id": 19,
     "nombre": "Campana extractora Elica",
     "imagen": "https://example.com/images/campana-elica.jpg",
@@ -158,20 +158,19 @@ let productos = [
     "descripcion": "Parrilla eléctrica Black+Decker con placas antiadherentes y termostato regulable.",
     "precio": 8500,
     "stock": 26
-  }
+  }*/
 ];
 
 function cargarproductos() {
-
-    for( let producto of productos){
+    for (let producto of productos) {
         let parrafo = document.createElement("div");
-        parrafo.id="boxproducto";
+        parrafo.id = "boxproducto";
         parrafo.innerHTML = `
-             <h2 id="nombreproducto"> ${producto.nombre}</h2>
-             <img src="" alt="" id="${producto.imagen}">
-            <h3 id="precioproducto"> $${producto.precio.toLocaleString()}</h3>
-            <button id="btncomprar" onclick ="verdetalle(${producto.id})">Comprar</button>
-        `
+            <h2 id="nombreproducto">${producto.nombre}</h2>
+            <img src="${producto.imagen}" alt="${producto.nombre}" id="img-producto-${producto.id}">
+            <h3 id="precioproducto">$${producto.precio.toLocaleString()}</h3>
+            <button id="btncomprar" onclick="verdetalle(${producto.id})">Comprar</button>
+        `;
         document.getElementById("boxproductos").appendChild(parrafo);
     }
 }
