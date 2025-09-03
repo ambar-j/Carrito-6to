@@ -62,3 +62,10 @@ function agregarcarrito() {
     }
     
 }
+
+function actualizar() {
+  let carrito = localStorage.getItem("totalproductos")
+  document.getElementById("totalproducto").innerHTML = carrito
+}
+
+actualizar()

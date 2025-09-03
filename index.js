@@ -1,42 +1,42 @@
 const productos = [
   {
     id: 1,
-    nombre: "Refrigerador Samsung RF28R7351SG",
-    descripcion: "Refrigerador de 4 puertas con dispensador de agua y hielo, tecnología Twin Cooling Plus, capacidad 28 pies cúbicos",
+    nombre: "Tiramisú",
+    descripcion: "Postre a base de vainillas, remojadas en café entre capas de crema",
     precio: 1299.99,
-    imagen: "img/helader.webp",
+    imagen: "img/tiramisu.jpg",
     stock: 15
   },
   {
     id: 2,
-    nombre: "Lavadora LG WM3900HWA",
-    descripcion: "Lavadora de carga frontal con capacidad de 4.5 pies cúbicos, tecnología TurboWash y WiFi integrado",
+    nombre: "Brownie",
+    descripcion: "Postre a base de brownie de chocolate",
     precio: 849.99,
-    imagen: "img/lavadora.webp",
+    imagen: "img/brownie.webp",
     stock: 23
   },
   {
     id: 3,
-    nombre: "Microondas Panasonic NN-SN966S",
-    descripcion: "Microondas de acero inoxidable con tecnología inverter, 2.2 pies cúbicos, 1250W de potencia",
+    nombre: "Selva Negra",
+    descripcion: "Torta a base de bizcochuelo de chocolate, rellena de capas de crema y un agregado de cerezas",
     precio: 189.99,
-    imagen: "img/microondas.webp",
+    imagen: "img/selvan.jfif",
     stock: 45
   },
   {
     id: 4,
-    nombre: "Lavavajillas Bosch SHPM88Z75N",
-    descripcion: "Lavavajillas empotrable ultra silencioso con tercera bandeja, tecnología PrecisionWash",
+    nombre: "Lemon Pie",
+    descripcion: "Postre con base de tarta, relleno con pasta sabor a limón",
     precio: 1199.99,
-    imagen: "img/",
+    imagen: "img/lemon.jpg",
     stock: 12
   },
   {
     id: 5,
-    nombre: "Aspiradora Dyson V15 Detect",
-    descripcion: "Aspiradora inalámbrica con detección láser de partículas, motor Hyperdymium y hasta 60 min de autonomía",
+    nombre: "Chocotorta",
+    descripcion: "Postre a base de galletitas Chocolinas, relleno con capas de dulce de leche y queso crema",
     precio: 749.99,
-    imagen: "img/aspiradora.webp",
+    imagen: "img/chocotorta.jpg",
     stock: 8
   },
   {
@@ -162,6 +162,11 @@ const productos = [
   }*/
 ];
 
+function actualizar() {
+  let carrito = localStorage.getItem("totalproductos")
+  document.getElementById("totalproducto").innerHTML = carrito
+}
+
 function cargarproductos() {
     for (let producto of productos) {
         let parrafo = document.createElement("div")
@@ -175,6 +180,8 @@ function cargarproductos() {
         document.getElementById("boxproductos").appendChild(parrafo)
     }
 }
+
+actualizar()
 
 cargarproductos()
 

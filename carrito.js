@@ -19,6 +19,7 @@ function cargarcarrito() {
     }
     document.getElementById("totalgasto").innerHTML = totalfinal
     document.getElementById("totalproducto").innerHTML = totalproductos
+    localStorage.setItem("totalproductos", totalproductos)
     
 }
 
