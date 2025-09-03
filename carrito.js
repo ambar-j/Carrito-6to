@@ -1,39 +1,25 @@
-let productoseleccionado = JSON.parse(localStorage.getItem("carrito"));
-
-function cargarCarrito() {
-    if (!productoseleccionado) {
-        console.log("No hay producto en el carrito.");
-        return;
+let productoseleccionados = JSON.parse(localStorage.getItem("carrito"));
+let totalfinal = 0;
+let totalproductos = 0;
+function cargarcarrito() {
+    for (let productoseleccionado of productoseleccionados) {
+        let total = productoseleccionado.precio*productoseleccionado.cantidad
+        totalfinal = totalfinal + total
+        totalproductos = totalproductos + parseInt(productoseleccionado.cantidad)
+        let fila = document.createElement("tr")
+        fila.innerHTML = `
+                        <td><img src="${productoseleccionado.imagen}" width="50"></td>
+                        <td>${productoseleccionado.cantidad}</td>
+                        <td>${productoseleccionado.nombre}</td>
+                        <td>${productoseleccionado.precio}</td>
+                        <td>${total}</td>
+                        <td><button>X</button></td>
+        `
+        document.getElementById("listadeproductos").appendChild(fila)
     }
-
-    let cantidad = productoseleccionado.cantidad || 1;
-    let total = productoseleccionado.precio * cantidad;
-
-    let fila = document.createElement("tr");
-    fila.innerHTML = `
-        <td><img src="${productoseleccionado.imagen}" alt="${productoseleccionado.nombre}" style="width:60px;"></td>            
-        <td>
-            <input class="editar-btn" type="number" value="${cantidad}" min="1" max="${productoseleccionado.stock}"
-                   onchange="actualizarTotal(this, ${productoseleccionado.precio})">
-        </td>            
-        <td>${productoseleccionado.nombre}</td>   
-        <td>$${productoseleccionado.precio.toLocaleString()}</td>         
-        <td class="total">$${total.toLocaleString()}</td>            
-        <td><button class="editar-btn" onclick="editarProducto()">X</button></td>
-    `;
-
-    document.getElementById("listadeproductos").appendChild(fila);
+    document.getElementById("totalgasto").innerHTML = totalfinal
+    document.getElementById("totalproducto").innerHTML = totalproductos
+    
 }
 
-function actualizarTotal(input, precio) {
-    const cantidad = parseInt(input.value);
-    const totalCelda = input.parentElement.parentElement.querySelector(".total");
-    const total = cantidad * precio;
-    totalCelda.textContent = `$${total.toLocaleString()}`;
-}
-
-function editarProducto() {
-    alert("Funcionalidad de edición pendiente...");
-}
-
-cargarCarrito();
+cargarcarrito()

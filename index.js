@@ -1,185 +1,186 @@
-let productos = [
+const productos = [
   {
-    "id": 1,
-    "nombre": "Refrigerador LG Smart",
-    "imagen": "img/helader.webp",
-    "descripcion": "Refrigerador LG Smart con capacidad de 300 litros, tecnología inverter y control digital.",
-    "precio": 85000,
-    "stock": 10
+    id: 1,
+    nombre: "Refrigerador Samsung RF28R7351SG",
+    descripcion: "Refrigerador de 4 puertas con dispensador de agua y hielo, tecnología Twin Cooling Plus, capacidad 28 pies cúbicos",
+    precio: 1299.99,
+    imagen: "img/helader.webp",
+    stock: 15
   },
   {
-    "id": 2,
-    "nombre": "Microondas Samsung",
-    "imagen": "img/microondas.webp",
-    "descripcion": "Microondas Samsung 800W con grill y varias funciones de cocción.",
-    "precio": 12000,
-    "stock": 15
+    id: 2,
+    nombre: "Lavadora LG WM3900HWA",
+    descripcion: "Lavadora de carga frontal con capacidad de 4.5 pies cúbicos, tecnología TurboWash y WiFi integrado",
+    precio: 849.99,
+    imagen: "img/lavadora.webp",
+    stock: 23
   },
   {
-    "id": 3,
-    "nombre": "Licuadora Oster Pro",
-    "imagen": "img/licuadora.webp",
-    "descripcion": "Licuadora Oster Pro con motor de 600W y jarra de vidrio de 1.5 litros.",
-    "precio": 6500,
-    "stock": 25
+    id: 3,
+    nombre: "Microondas Panasonic NN-SN966S",
+    descripcion: "Microondas de acero inoxidable con tecnología inverter, 2.2 pies cúbicos, 1250W de potencia",
+    precio: 189.99,
+    imagen: "img/microondas.webp",
+    stock: 45
   },
   {
-    "id": 4,
-    "nombre": "Lavadora Whirlpool",
-    "imagen": "img/lavadora.webp",
-    "descripcion": "Lavadora Whirlpool automática de 7kg con múltiples programas de lavado.",
-    "precio": 22000,
-    "stock": 8
+    id: 4,
+    nombre: "Lavavajillas Bosch SHPM88Z75N",
+    descripcion: "Lavavajillas empotrable ultra silencioso con tercera bandeja, tecnología PrecisionWash",
+    precio: 1199.99,
+    imagen: "img/",
+    stock: 12
   },
   {
-    "id": 5,
-    "nombre": "Plancha Philips",
-    "imagen": "img/plancha.webp",
-    "descripcion": "Plancha a vapor Philips con suela antiadherente y función anti-goteo.",
-    "precio": 4800,
-    "stock": 30
+    id: 5,
+    nombre: "Aspiradora Dyson V15 Detect",
+    descripcion: "Aspiradora inalámbrica con detección láser de partículas, motor Hyperdymium y hasta 60 min de autonomía",
+    precio: 749.99,
+    imagen: "img/aspiradora.webp",
+    stock: 8
   },
   {
-    "id": 6,
-    "nombre": "Aspiradora Dyson V10",
-    "imagen": "img/aspiradora.webp",
-    "descripcion": "Aspiradora inalámbrica Dyson V10 con potente succión y batería de larga duración.",
-    "precio": 60000,
-    "stock": 5
+    id: 6,
+    nombre: "Aire Acondicionado Carrier 53WCE12",
+    descripcion: "Aire acondicionado de ventana 12,000 BTU con control remoto y filtro antimicrobiano",
+    precio: 449.99,
+    imagen: "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=300",
+    stock: 19
   },
   {
-    "id": 7,
-    "nombre": "Horno Eléctrico Teka",
-    "imagen": "https://example.com/images/horno-teka.jpg",
-    "descripcion": "Horno eléctrico Teka con capacidad de 45 litros y función de convección.",
-    "precio": 28000,
-    "stock": 12
+    id: 7,
+    nombre: "Estufa Whirlpool WFG975H0HZ",
+    descripcion: "Estufa de gas de acero inoxidable con 5 quemadores, horno de convección y parrilla integrada",
+    precio: 1599.99,
+    imagen: "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=300",
+    stock: 6
   },
   {
-    "id": 8,
-    "nombre": "Extractor de jugos Philips",
-    "imagen": "https://example.com/images/extractor-philips.jpg",
-    "descripcion": "Extractor de jugos Philips con motor silencioso y sistema anti-goteo.",
-    "precio": 7500,
-    "stock": 20
+    id: 8,
+    nombre: "Secadora Electrolux EFME627UTT",
+    descripcion: "Secadora eléctrica de 8.0 pies cúbicos con sensor de humedad y tecnología Perfect Steam",
+    precio: 899.99,
+    imagen: "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=300",
+    stock: 14
   },
   {
-    "id": 9,
-    "nombre": "Cafetera Nespresso",
-    "imagen": "https://example.com/images/cafetera-nespresso.jpg",
-    "descripcion": "Cafetera Nespresso con sistema de cápsulas y presión de 19 bares.",
-    "precio": 16000,
-    "stock": 18
+    id: 9,
+    nombre: "Cafetera Keurig K-Elite",
+    descripcion: "Cafetera de cápsulas con 5 tamaños de taza, depósito de 75 oz y función de café helado",
+    precio: 169.99,
+    imagen: "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=300",
+    stock: 32
   },
   {
-    "id": 10,
-    "nombre": "Televisor Samsung 55\"",
-    "imagen": "https://example.com/images/tv-samsung-55.jpg",
-    "descripcion": "Televisor Samsung 55 pulgadas 4K UHD con HDR y Smart TV.",
-    "precio": 45000,
-    "stock": 7
+    id: 10,
+    nombre: "Licuadora Vitamix A3500",
+    descripcion: "Licuadora de alta potencia con pantalla táctil, tecnología Self-Detect y conectividad inalámbrica",
+    precio: 549.99,
+    imagen: "img/licuadora.webp",
+    stock: 11
   },
   {
-    "id": 11,
-    "nombre": "Calefón Bosch",
-    "imagen": "https://example.com/images/calefon-bosch.jpg",
-    "descripcion": "Calefón Bosch a gas con encendido electrónico y alta eficiencia energética.",
-    "precio": 18000,
-    "stock": 9
+    id: 11,
+    nombre: "Tostadora Breville BOV900BSS",
+    descripcion: "Horno tostador inteligente con 13 funciones preestablecidas, pantalla LCD y interior de acero inoxidable",
+    precio: 299.99,
+    imagen: "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=300",
+    stock: 27
   },
   {
-    "id": 12,
-    "nombre": "Secadora Electrolux",
-    "imagen": "https://example.com/images/secadora-electrolux.jpg",
-    "descripcion": "Secadora Electrolux de 9kg con sensor de humedad y múltiples programas.",
-    "precio": 35000,
-    "stock": 6
+    id: 12,
+    nombre: "Plancha Black+Decker D3030",
+    descripcion: "Plancha de vapor digital con suela antiadherente, apagado automático y tanque de 350ml",
+    precio: 79.99,
+    imagen: "img/plancha.webp",
+    stock: 38
   },
   {
-    "id": 13,
-    "nombre": "Sandwichera Oster",
-    "imagen": "https://example.com/images/sandwichera-oster.jpg",
-    "descripcion": "Sandwichera Oster con placas antiadherentes y termostato ajustable.",
-    "precio": 3500,
-    "stock": 40
+    id: 13,
+    nombre: "Ventilador Honeywell HYF290B",
+    descripcion: "Ventilador de torre oscilante con control remoto, temporizador y 3 velocidades",
+    precio: 129.99,
+    imagen: "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=300",
+    stock: 22
   },
   {
-    "id": 14,
-    "nombre": "Freidora de aire Xiaomi",
-    "imagen": "https://example.com/images/freidora-xiaomi.jpg",
-    "descripcion": "Freidora de aire Xiaomi con capacidad de 3.5 litros y control táctil.",
-    "precio": 11000,
-    "stock": 22
+    id: 14,
+    nombre: "Purificador de Aire Levoit Core 300",
+    descripcion: "Purificador de aire HEPA para habitaciones hasta 215 pies cuadrados, ultra silencioso",
+    precio: 99.99,
+    imagen: "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=300",
+    stock: 41
   },
   {
-    "id": 15,
-    "nombre": "Batidora KitchenAid",
-    "imagen": "https://example.com/images/batidora-kitchenaid.jpg",
-    "descripcion": "Batidora KitchenAid profesional con motor potente y múltiples accesorios.",
-    "precio": 42000,
-    "stock": 10
+    id: 15,
+    nombre: "Freidora de Aire Ninja AF101",
+    descripcion: "Freidora de aire de 4 cuartos con 4 funciones programables y cesta antiadherente",
+    precio: 99.99,
+    imagen: "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=300",
+    stock: 29
   },
   {
-    "id": 16,
-    "nombre": "Aire acondicionado LG",
-    "imagen": "https://example.com/images/aire-lg.jpg",
-    "descripcion": "Aire acondicionado LG split frío/calor con eficiencia energética A++.",
-    "precio": 65000,
-    "stock": 4
+    id: 16,
+    nombre: "Batidora KitchenAid KSM150PSER",
+    descripcion: "Batidora de pie artesanal de 5 cuartos con 10 velocidades y tazón de acero inoxidable",
+    precio: 379.99,
+    imagen: "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=300",
+    stock: 16
   },
   {
-    "id": 17,
-    "nombre": "Tostadora Philips",
-    "imagen": "https://example.com/images/tostadora-philips.jpg",
-    "descripcion": "Tostadora Philips con ranuras extra anchas y control de temperatura.",
-    "precio": 4200,
-    "stock": 28
+    id: 17,
+    nombre: "Calentador de Agua Rheem RTEX-13",
+    descripcion: "Calentador de agua eléctrico sin tanque de 13kW para toda la casa con termostato digital",
+    precio: 449.99,
+    imagen: "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=300",
+    stock: 9
   },
   {
-    "id": 18,
-    "nombre": "Robot de cocina Moulinex",
-    "imagen": "https://example.com/images/robot-moulinex.jpg",
-    "descripcion": "Robot de cocina Moulinex multifuncional con capacidad de 3 litros.",
-    "precio": 25000,
-    "stock": 14
+    id: 18,
+    nombre: "Extractor de Jugos Omega J8006HDS",
+    descripcion: "Extractor de jugos masticador con motor de baja velocidad y 15 años de garantía",
+    precio: 299.99,
+    imagen: "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=300",
+    stock: 13
   },
-  /*{
-    "id": 19,
-    "nombre": "Campana extractora Elica",
-    "imagen": "https://example.com/images/campana-elica.jpg",
-    "descripcion": "Campana extractora Elica de acero inoxidable con iluminación LED.",
-    "precio": 22000,
-    "stock": 11
+  /*
+  {
+    id: 19,
+    nombre: "Humidificador Crane EE-5301W",
+    descripcion: "Humidificador ultrasónico de vapor frío con tanque de 2.3 litros y funcionamiento silencioso",
+    precio: 59.99,
+    imagen: "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=300",
+    stock: 35
   },
   {
-    "id": 20,
-    "nombre": "Parrilla eléctrica Black+Decker",
-    "imagen": "https://example.com/images/parrilla-bd.jpg",
-    "descripcion": "Parrilla eléctrica Black+Decker con placas antiadherentes y termostato regulable.",
-    "precio": 8500,
-    "stock": 26
+    id: 20,
+    nombre: "Robot de Cocina Instant Pot Duo 7-en-1",
+    descripcion: "Olla de presión eléctrica multifuncional de 6 cuartos con 13 programas inteligentes",
+    precio: 99.99,
+    imagen: "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=300",
+    stock: 24
   }*/
 ];
 
 function cargarproductos() {
     for (let producto of productos) {
-        let parrafo = document.createElement("div");
-        parrafo.id = "boxproducto";
+        let parrafo = document.createElement("div")
+        parrafo.id = "boxproducto"
         parrafo.innerHTML = `
-            <h2 id="nombreproducto">${producto.nombre}</h2>
-            <img src="${producto.imagen}" alt="${producto.nombre}" id="img-producto-${producto.id}">
-            <h3 id="precioproducto">$${producto.precio.toLocaleString()}</h3>
-            <button id="btncomprar" onclick="verdetalle(${producto.id})">Comprar</button>
-        `;
-        document.getElementById("boxproductos").appendChild(parrafo);
+                    <h2 id="nombreproducto">${producto.nombre}</h2>
+                    <img src="${producto.imagen}" alt="" id="${producto.imagen}">
+                    <h3 id="precioproducto">${producto.precio}</h3>
+                    <button id="btncomprar" onclick="verdetalle(${producto.id})">Ver</button>
+        `
+        document.getElementById("boxproductos").appendChild(parrafo)
     }
 }
 
 cargarproductos()
 
 function verdetalle(id) {
-  let productoseleccionado = productos.find(producto => producto.id == id );
-  let productojson = JSON.stringify(productoseleccionado);
-  localStorage.setItem("detalle", productojson);
-  window.location.href="detalle.html";
+  let productoseleccionado = productos.find(producto => producto.id == id)
+  let productojson = JSON.stringify(productoseleccionado)
+  localStorage.setItem("detalle", productojson)
+  window.location.href = "detalle.html"
 }

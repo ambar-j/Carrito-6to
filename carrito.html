@@ -3,38 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito de Compras</title>
+    <title>Carrito de Compra</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <header>
-        <h1>Carrito de Compras</h1>
+        <h1>Carrito de Compra</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li>Productos</li>
                 <li>Contacto</li>
+                <li>
+                    <img src="img/iconocarrito.svg">
+                    <p id="totalproducto">0</p>
+                </li>
             </ul>
         </nav>
     </header>
-    <table>
-        <thead>
-            <tr>
-                <td>Imagen</td>            
-                <td class="editar-btn">Cantidad</td>            
-                <td>Producto</td>   
-                <td>Precio</td>         
-                <td>Total</td>            
-                <td class="editar-btn">Editar</td>                        
-            </tr>
-        </thead>
-    <tbody id="listadeproductos">
-    </tbody>
-    </table>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <td>Imagen</td>
+                    <td>Cantidad</td>
+                    <td>Producto</td>
+                    <td>Precio</td>
+                    <td>Total</td>
+                    <td>Editar</td>
+                </tr>
+            </thead>
+            <tbody id="listadeproductos">
+
+            </tbody>
+        </table>
+        <div id="totalcompra">
+            <p id="totalgasto"></p>
+        </div>
+    </main>
     <footer>
-        <h3>Carrito de Compras</h3>
-        <p>Dirección: Avenida Siempreviva 123</p>
+        <h3>Carrito de Compra</h3>
+        <p>Dirección: Av. Siempre vida 34</p>
+        <p>Teléfono: 0539454545</p>
     </footer>
+
     <script src="carrito.js"></script>
 </body>
 </html>
